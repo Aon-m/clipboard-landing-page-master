@@ -14,14 +14,20 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
 
     <title>Frontend Mentor | Clipboard landing page</title>
   </head>
 
   <body>
     <header>
+      <div class="header_image"></div>
       <h2 class="heading heading--large">A history of everything you copy</h2>
 
       <p class="paragraph_text">
@@ -39,7 +45,7 @@
     </header>
 
     <main>
-      <h2 class="heading heading-medium">Keep track of your snippets</h2>
+      <h2 class="heading heading--medium">Keep track of your snippets</h2>
 
       <img
         class="image"
@@ -53,20 +59,20 @@
         iOS apps will help you organize everything.
       </p>
 
-      <h2 class="heading heading--medium">Quick Search</h2>
+      <h3 class="heading heading--small">Quick Search</h3>
 
       <p class="paragraph_text">
         Easily search your snippets by content, category, web address,
         application, and more.
       </p>
 
-      <h2 class="heading heading--medium">iCloud Sync</h2>
+      <h3 class="heading heading--small">iCloud Sync</h3>
 
       <p class="paragraph_text">
         Instantly saves and syncs snippets across all your devices.
       </p>
 
-      <h2 class="heading heading--medium">Complete History</h2>
+      <h3 class="heading heading--small">Complete History</h3>
 
       <p class="paragraph_text">
         Retrieve any snippets from the first moment you started using the app.
@@ -90,32 +96,60 @@
       <p class="paragraph_text">
         We’ve got the tools to boost your productivity.
       </p>
-<img src="images/icon-blacklist.svg" alt="Blacklists Icon" class="icon icon--medium">
-      <h2 class="heading heading--medium">Create blacklists</h2>
+      <img
+        src="images/icon-blacklist.svg"
+        alt="Blacklists Icon"
+        class="icon icon--medium"
+      />
+      <h3 class="heading heading--small">Create blacklists</h3>
 
       <p class="paragraph_text">
         Ensure sensitive information never makes its way to your clipboard by
         excluding certain sources.
       </p>
-      <img src="images/icon-text.svg" alt="Text Icon" class="icon icon--medium">
+      <img
+        src="images/icon-text.svg"
+        alt="Text Icon"
+        class="icon icon--medium"
+      />
 
-      <h2 class="heading heading--medium">Plain text snippets</h2>
+      <h3 class="heading heading--small">Plain text snippets</h3>
 
       <p class="paragraph_text">
         Remove unwanted formatting from copied text for a consistent look.
       </p>
-      <img src="images/icon-preview.svg" alt="Eye icon" class="icon icon--medium">
+      <img
+        src="images/icon-preview.svg"
+        alt="Eye icon"
+        class="icon icon--medium"
+      />
 
-      <h2 class="heading heading--medium">Sneak preview</h2>
+      <h3 class="heading heading--small">Sneak preview</h3>
 
       <p class="paragraph_text">
         Quick preview of all snippets on your Clipboard for easy access.
       </p>
-      <img src="images/logo-google.png" alt="Google Logo" class="logo logo--medium">
-      <img src="images/logo-ibm.png" alt="IBM Logo" class="logo logo--medium">
-      <img src="images/logo-microsoft.png" alt="Microsoft Logo" class="logo logo--medium">
-      <img src="images/logo-hp.png" alt="Hewlett Packward Logo" class="logo logo--medium">
-      <img src="images/logo-vector-graphics.png" alt="Vector Graphics Logo" class="logo logo--medium">
+      <img
+        src="images/logo-google.png"
+        alt="Google Logo"
+        class="logo logo--medium"
+      />
+      <img src="images/logo-ibm.png" alt="IBM Logo" class="logo logo--medium" />
+      <img
+        src="images/logo-microsoft.png"
+        alt="Microsoft Logo"
+        class="logo logo--medium"
+      />
+      <img
+        src="images/logo-hp.png"
+        alt="Hewlett Packward Logo"
+        class="logo logo--medium"
+      />
+      <img
+        src="images/logo-vector-graphics.png"
+        alt="Vector Graphics Logo"
+        class="logo logo--medium"
+      />
       <h1 class="heading heading-medium">Clipboard for iOS and Mac OS</h1>
 
       <p class="paragraph_text">
@@ -133,7 +167,11 @@
     </main>
 
     <footer>
-      <img src="images/logo.svg" class="icon icon--medium" alt="Clipboard Logo" />
+      <img
+        src="images/logo.svg"
+        class="icon icon--medium"
+        alt="Clipboard Logo"
+      />
 
       <a class="footer__link" href="#"> FAQs</a>
 
