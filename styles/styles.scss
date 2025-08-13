@@ -20,6 +20,9 @@
 
   --button-primary-hover: hsl(171, 56%, 44%);
   --button-secondary-hover: hsl(233, 90%, 69%);
+
+  --button-primary-shadow: hsla(171, 76%, 54%, 0.329);
+  --button-secondary-shadow: hsla(233, 91%, 75%, 0.493);
 }
 
 @mixin flex-column {
@@ -57,6 +60,7 @@ main {
 
 footer {
   @include flex-column();
+  width: 100%;
   margin-block-start: 5rem;
   grid-area: footer;
   background-color: var(--background-secondary);
@@ -65,22 +69,24 @@ footer {
 /* Text styles */
 .heading {
   color: var(--heading-primary);
-  margin-block: 0.5rem;
+
   &--small {
-    font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.3rem);
+    font-size: clamp(1rem, calc(1rem + 1vw), 1.1rem);
   }
   &--medium {
     font-size: clamp(1.3rem, calc(1.3rem + 1vw), 1.5rem);
   }
   &--large {
-    font-size: clamp(1.5rem, calc(1.5rem + 1vw), 2rem);
+    font-size: clamp(1.5rem, calc(1.5rem + 1vw), 1.7rem);
   }
 }
 
 .paragraph_text {
   color: var(--paragraph-primary);
-  font-size: clamp(0.9rem, calc(0.7rem + 1vw), 1.2rem);
+  font-size: clamp(0.9rem, calc(1.1rem - 1vw), 1.1rem);
   line-height: 1.3rem;
+  max-width: 65ch;
+  margin-inline: auto;
 }
 
 .attribution {
@@ -101,9 +107,8 @@ footer {
 /* Interactive Elements */
 .download_button {
   border-radius: 3rem;
-  width: min(80vw, 20rem);
-  padding: 0.8rem 1rem;
-  margin: 1rem;
+  padding: 0.8rem 2rem;
+  margin-block: 2rem;
 
   a {
     color: white;
@@ -112,14 +117,19 @@ footer {
 
   &--green {
     background-color: var(--button-primary);
+    box-shadow: 0 0.2rem 0.5rem 0.2rem var(--button-primary-shadow);
+
     &:hover {
       background-color: var(--button-primary-hover);
+      cursor: pointer;
     }
   }
   &--blue {
     background-color: var(--button-secondary);
+    box-shadow: 0 0.2rem 0.5rem 0.2rem var(--button-secondary-shadow);
     &:hover {
       background-color: var(--button-secondary-hover);
+      cursor: pointer;
     }
   }
 }
@@ -128,7 +138,6 @@ footer {
   font-size: 0.8rem;
   color: var(--heading-primary);
   text-decoration: none;
-  margin-block: 0.5rem;
 
   &:hover {
     text-decoration: underline;
@@ -141,8 +150,7 @@ footer {
 }
 
 .image {
-  width: 100%;
-  margin-block: 3rem;
+  width: min(100%, 30rem);
 }
 
 .icon {
@@ -150,12 +158,12 @@ footer {
   justify-self: center;
 
   &--small {
-    width: min(6%, 1.5rem);
-    margin: 2rem 1rem;
+    width: 0.8rem;
+    margin: 2rem 0.2rem;
   }
 
   &--medium {
-    width: min(15%, 3rem);
+    width: min(15%, 2.5rem);
     margin-block: 2rem;
   }
 
@@ -168,8 +176,7 @@ footer {
 .logo {
   @extend .icon;
   display: block;
-  margin-block: 2rem;
-  width: min(35%, 10rem);
+  width: min(35%, 6rem);
 }
 
 /* Utility styles */
@@ -178,8 +185,21 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
-.margin--large {
-  margin-block: 4rem;
+
+.margin {
+  &--small {
+    margin-block: 0.5rem;
+  }
+  &--medium {
+    margin: 2rem;
+  }
+  &--large {
+    margin-block: 4rem;
+  }
+}
+
+.align-left {
+  text-align: left;
 }
 
 /* Media queires */
@@ -190,9 +210,18 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .flex_row--desktop_only {
+  .flex_row--wide_screen_only {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .content {
+    width: 35ch;
+  }
+
+  .image {
+    padding-inline-end: 3rem;
   }
 }
