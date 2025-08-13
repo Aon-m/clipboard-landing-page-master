@@ -8,12 +8,18 @@
 }
 
 :root {
+  /* Main colors */
   --paragraph-primary: hsl(201, 11%, 66%);
   --heading-primary: hsl(210, 10%, 33%);
-  --button-primary: hsl(171, 66%, 44%);
-  --button-secondary: hsl(233, 100%, 69%);
   --background-primary: hsl(0, 0%, 100%);
   --background-secondary: hsla(0, 0%, 95%, 0.548);
+
+  /* Button colors */
+  --button-primary: hsl(171, 66%, 44%);
+  --button-secondary: hsl(233, 100%, 69%);
+
+  --button-primary-hover: hsl(171, 56%, 44%);
+  --button-secondary-hover: hsl(233, 90%, 69%);
 }
 
 @mixin flex-column {
@@ -97,17 +103,24 @@ footer {
   border-radius: 3rem;
   width: min(80vw, 20rem);
   padding: 0.8rem 1rem;
-  margin: 1rem auto;
+  margin: 1rem;
 
   a {
     color: white;
     text-decoration: none;
   }
+
   &--green {
     background-color: var(--button-primary);
+    &:hover {
+      background-color: var(--button-primary-hover);
+    }
   }
   &--blue {
     background-color: var(--button-secondary);
+    &:hover {
+      background-color: var(--button-secondary-hover);
+    }
   }
 }
 
@@ -160,7 +173,7 @@ footer {
 }
 
 /* Utility styles */
-.flex-row {
+.flex_row {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -173,5 +186,13 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .attribution a:hover {
     transition: 0ms ease;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .flex_row--desktop_only {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
