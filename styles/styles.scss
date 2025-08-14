@@ -18,11 +18,11 @@
   --button-primary: hsl(171, 66%, 44%);
   --button-secondary: hsl(233, 100%, 69%);
 
-  --button-primary-hover: hsl(171, 56%, 44%);
-  --button-secondary-hover: hsl(233, 90%, 69%);
+  --button-primary-hover: hsl(171, 66%, 47%);
+  --button-secondary-hover: hsl(233, 100%, 73%);
 
-  --button-primary-shadow: hsla(171, 76%, 54%, 0.329);
-  --button-secondary-shadow: hsla(233, 91%, 75%, 0.493);
+  --button-primary-shadow: hsla(171, 76%, 54%, 0.6);
+  --button-secondary-shadow: hsla(233, 91%, 75%, 0.6);
 }
 
 @mixin flex-column {
@@ -120,7 +120,7 @@ footer {
 
   &--green {
     background-color: var(--button-primary);
-    box-shadow: 0 0.3rem 0.5rem 0rem var(--button-primary-shadow);
+    box-shadow: 0 0.2rem 1rem 0rem var(--button-primary-shadow);
 
     &:hover {
       background-color: var(--button-primary-hover);
@@ -129,7 +129,7 @@ footer {
   }
   &--blue {
     background-color: var(--button-secondary);
-    box-shadow: 0 0.3rem 0.5rem 0rem var(--button-secondary-shadow);
+    box-shadow: 0 0.2rem 1rem 0rem var(--button-secondary-shadow);
     &:hover {
       background-color: var(--button-secondary-hover);
       cursor: pointer;
@@ -144,6 +144,7 @@ footer {
 
   &:hover {
     text-decoration: underline;
+    color: var(--button-primary);
   }
 }
 
@@ -165,14 +166,19 @@ footer {
   filter: drop-shadow(0 0 0.5rem var(--paragraph-primary));
 }
 
+.svg {
+  width: 0.8rem;
+  margin: 2rem 0.2rem;
+  fill: var(--heading-primary);
+  &:hover {
+    cursor: pointer;
+    fill: var(--button-primary);
+  }
+}
+
 .icon {
   align-self: center;
   justify-self: center;
-
-  &--small {
-    width: 0.8rem;
-    margin: 2rem 0.2rem;
-  }
 
   &--medium {
     width: min(15%, 2.5rem);
@@ -238,20 +244,20 @@ footer {
   }
 
   .heading {
-  &--small {
-    font-size: 1.2rem;
+    &--small {
+      font-size: 1.2rem;
+    }
+    &--medium {
+      font-size: 1.5rem;
+    }
+    &--large {
+      font-size: 1.7rem;
+    }
   }
-  &--medium {
-    font-size: 1.5rem;
-  }
-  &--large {
-    font-size: 1.7rem;
-  }
-}
 
-.paragraph_text {
-  font-size: 1rem;
-}
+  .paragraph_text {
+    font-size: 1rem;
+  }
 
   .align_left--wide_screen_only {
     text-align: left;

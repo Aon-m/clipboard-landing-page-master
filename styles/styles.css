@@ -16,10 +16,10 @@
   /* Button colors */
   --button-primary: hsl(171, 66%, 44%);
   --button-secondary: hsl(233, 100%, 69%);
-  --button-primary-hover: hsl(171, 56%, 44%);
-  --button-secondary-hover: hsl(233, 90%, 69%);
-  --button-primary-shadow: hsla(171, 76%, 54%, 0.329);
-  --button-secondary-shadow: hsla(233, 91%, 75%, 0.493);
+  --button-primary-hover: hsl(171, 66%, 47%);
+  --button-secondary-hover: hsl(233, 100%, 73%);
+  --button-primary-shadow: hsla(171, 76%, 54%, 0.6);
+  --button-secondary-shadow: hsla(233, 91%, 75%, 0.6);
 }
 
 /* Layout styles*/
@@ -112,7 +112,7 @@ footer {
 }
 .download_button--green {
   background-color: var(--button-primary);
-  box-shadow: 0 0.3rem 0.5rem 0rem var(--button-primary-shadow);
+  box-shadow: 0 0.2rem 1rem 0rem var(--button-primary-shadow);
 }
 .download_button--green:hover {
   background-color: var(--button-primary-hover);
@@ -120,7 +120,7 @@ footer {
 }
 .download_button--blue {
   background-color: var(--button-secondary);
-  box-shadow: 0 0.3rem 0.5rem 0rem var(--button-secondary-shadow);
+  box-shadow: 0 0.2rem 1rem 0rem var(--button-secondary-shadow);
 }
 .download_button--blue:hover {
   background-color: var(--button-secondary-hover);
@@ -134,6 +134,7 @@ footer {
 }
 .footer__link:hover {
   text-decoration: underline;
+  color: var(--button-primary);
 }
 
 /* Assets */
@@ -154,13 +155,19 @@ footer {
   filter: drop-shadow(0 0 0.5rem var(--paragraph-primary));
 }
 
+.svg {
+  width: 0.8rem;
+  margin: 2rem 0.2rem;
+  fill: var(--heading-primary);
+}
+.svg:hover {
+  cursor: pointer;
+  fill: var(--button-primary);
+}
+
 .icon, .logo {
   align-self: center;
   justify-self: center;
-}
-.icon--small {
-  width: 0.8rem;
-  margin: 2rem 0.2rem;
 }
 .icon--medium {
   width: min(15%, 2.5rem);
